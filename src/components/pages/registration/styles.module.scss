@@ -1,0 +1,189 @@
+@import '../../../assets/vars/vars';
+@import '../../../assets/vars/media';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    justify-content: center;
+  }
+}
+
+.wrapperInfo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.infoContainer {
+  max-width: 397px;
+
+  @include media-breakpoint-down(md) {
+    padding: 30px 16px 40px;
+  }
+}
+
+.infoTitle {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.02em;
+  color: $light-black;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 350px){
+    text-align: center;
+  }
+}
+
+.infoBtn {
+  width: 397px;
+  height: 56px;
+  background: $red;
+  box-shadow: 0 20px 25px rgba(209, 26, 42, 0.15);
+  border-radius: 12px;
+  border: none;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: $white;
+  cursor: pointer;
+  margin-top: 25px;
+
+  @include media-breakpoint-down(md) {
+    width: 343px;
+  }
+
+  @media screen and (max-width: 350px){
+    width: 300px;
+  }
+}
+
+.infoBtn:hover {
+  background: $light-red;
+  box-shadow: 0 20px 25px rgba(209, 26, 42, 0.15);
+  border-radius: 12px;
+}
+
+.wrapperImgLogo {
+  width: 698px;
+  height: 1114px;
+  background: url("./../../../assets/images/logoRegistration.svg") no-repeat center;
+  background-size: cover;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.itemText {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: $light-blue;
+  margin-bottom: 13px;
+}
+
+.itemText span {
+  font-size: 13px;
+  line-height: 18px;
+  color: $red;
+}
+
+.infoDescription {
+  margin: 15px 0 30px;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label, {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $light-gray;
+  background-color: $white;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: $light-green;
+  border: none;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  border-radius: 2px;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 2px solid $white;
+  border-bottom: 2px solid $white;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+label {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: $light-blue;
+  margin-bottom: 13px;
+
+  @include media-breakpoint-down(md) {
+    width: 279px;
+  }
+}
+

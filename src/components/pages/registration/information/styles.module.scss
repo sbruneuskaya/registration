@@ -1,0 +1,94 @@
+@import '../../../../assets/vars/vars';
+@import '../../../../assets/vars/media';
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.item {
+  max-width: 188px;
+  margin-bottom: 25px;
+
+  @include media-breakpoint-down(md) {
+    max-width: 161px;
+  }
+
+  @media screen and (max-width: 350px){
+    width: 140px;
+  }
+}
+
+.itemText {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: $light-blue;
+  margin-bottom: 13px;
+}
+
+.itemPasswordDescription span,
+.itemText span {
+  font-size: 13px;
+  line-height: 18px;
+  color: $red;
+}
+
+.item input,
+.itemPassword input {
+  width: 100%;
+  height: 56px;
+  background: $dark-white;
+  border-radius: 8px;
+  border: none;
+  padding: 0 20px;
+}
+
+.itemPassword {
+  margin-bottom: 25px;
+}
+
+input:focus {
+  outline-color: $red;
+}
+
+.itemPasswordLogo {
+  background-image: url("./../../../../assets/images/passwordLogo.png");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 5%;
+  top: 55%;
+  cursor: pointer;
+}
+
+.itemTextWrapper {
+  position: relative;
+}
+
+.itemPasswordDescription {
+  max-width: 370px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  color: $black;
+  margin-top: 10px;
+
+  @include media-breakpoint-down(md) {
+    width: 340px;
+  }
+
+  @media screen and (max-width: 350px){
+    width: 300px;
+  }
+}
+
+.boxWrapper {
+  position: relative;
+}
